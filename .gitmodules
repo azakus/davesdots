@@ -40,6 +40,3 @@
 [submodule "vim/bundle/vim-webcomponents"]
 	path = vim/bundle/vim-webcomponents
 	url = https://github.com/azakus/vim-webcomponents.git
-[submodule "vim/bundle/surround"]
-	path = vim/bundle/surround
-	url = https://github.com/tpope/vim-surround/
