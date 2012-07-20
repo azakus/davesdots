@@ -3,8 +3,7 @@ Config { font = "xft:Incosolata:size=8:antialias=true"
        , fgColor = "grey"
        , position = TopW L 90
        , lowerOnStart = True
-       , commands = [Run Wireless "wlan0" ["-t", "wlan0: <essid> <quality>%"] 300
-                    ,Run Network "eth0" ["-L","0","-H","200","--normal","#8AE234","--high","#CC0000"] 10
+       , commands = [ Run Wireless "wlan0" ["-t", "wlan0: <essid> <quality>%"] 300
                     , Run Cpu ["-L","3","-H","50","--normal","#8AE234","--high","#CC0000"] 10
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
                     , Run Swap [] 10
