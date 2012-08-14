@@ -5,7 +5,8 @@
 unkey_host ()
 {
    [ $# -ne 1 ] && return 1
-   sed -i -e "/$1/d" $HOME/.ssh/known_hosts
+   ssh-keygen -R "$1"
+   #sed -i -e "/$1/d" $HOME/.ssh/known_hosts
 }
 
 err ()
