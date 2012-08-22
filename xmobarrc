@@ -6,13 +6,12 @@ Config { font = "xft:Incosolata:size=8:antialias=true"
        , commands = [ Run Wireless "wlan0" ["-t", "wlan0: <essid> <quality>%"] 300
                     , Run Cpu ["-L","3","-H","50","--normal","#8AE234","--high","#CC0000"] 10
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
-                    , Run Swap [] 10
-                    , Run Com "/home/azakus/bin/thinkbat" [] "thinkbat" 200
-                    , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+                    , Run BatteryP ["BAT0"] ["-t", "[<acstatus>] <timeleft> (<left>%)", "-L", "15", "-H", "80", "-l", "red", "-h", "green", "--", "-O", "+", "-o", "-"] 200
+                    , Run Date "%a %b %_d %Y %H:%M" "date" 300
                     , Run Weather "KSFO" ["-t", "SFO: <skyCondition> <tempF>F"] 3000
                     , Run StdinReader
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% | %cpu% | %memory% | %wlan0wi% | %KSFO% }{ <fc=#ee9a00>%date%</fc> | %thinkbat%"
+       , template = "%StdinReader% | %cpu% | %memory% | %wlan0wi% | %KSFO% }{ <fc=#ee9a00>%date%</fc> | %battery%"
        }
