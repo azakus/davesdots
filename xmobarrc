@@ -1,9 +1,10 @@
 Config { font = "xft:Incosolata:size=8:antialias=true"
        , bgColor = "black"
        , fgColor = "grey"
-       , position = TopW L 90
+       , position = TopW L 95
        , lowerOnStart = True
        , commands = [ Run Wireless "wlan0" ["-t", "wlan0: <essid> <quality>%"] 300
+                    , Run Com "/home/azakus/bin/findip" ["wlan0"] "ip" 300
                     , Run Cpu ["-L","3","-H","50","--normal","#8AE234","--high","#CC0000"] 10
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
                     , Run BatteryP ["BAT0"] ["-t", "[<acstatus>] <timeleft> (<left>%)", "-L", "15", "-H", "80", "-l", "red", "-h", "green", "--", "-O", "+", "-o", "-"] 200
@@ -13,5 +14,5 @@ Config { font = "xft:Incosolata:size=8:antialias=true"
                     ]
        , sepChar = "%"
        , alignSep = "}{"
-       , template = "%StdinReader% | %cpu% | %memory% | %wlan0wi% | %KSFO% }{ <fc=#ee9a00>%date%</fc> | %battery%"
+       , template = "%StdinReader% }{ %cpu% | %memory% | %wlan0wi% %ip% | %KSFO% | %battery% | <fc=#ee9a00>%date%</fc>"
        }
