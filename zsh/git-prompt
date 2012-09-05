@@ -1,0 +1,5 @@
+#!/bin/zsh
+
+if [ -d ~/.git-prompt ]; then
+  . ~/.git-prompt/git-prompt
+fi
