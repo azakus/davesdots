@@ -7,7 +7,7 @@ Config { font = "xft:Incosolata:size=8:antialias=true"
                     , Run Com "/home/azakus/bin/findip" ["wlan0"] "ip" 300
                     , Run Cpu ["-L","3","-H","50","--normal","#8AE234","--high","#CC0000"] 10
                     , Run Memory ["-t","Mem: <usedratio>%"] 10
-                    , Run BatteryP ["BAT0"] ["-t", "[<acstatus>] <timeleft> (<left>%)", "-L", "15", "-H", "80", "-l", "red", "-h", "green", "--", "-O", "+", "-o", "-"] 300
+                    , Run BatteryP ["BAT0"] ["-t", "[<acstatus>] <timeleft> (<left>%)", "-L", "15", "-H", "80", "-l", "#CC0000", "-h", "#8AE234", "--", "-O", "+", "-o", "-"] 300
                     , Run Date "%a %b %_d %Y %H:%M" "date" 300
                     , Run StdinReader
                     ]
