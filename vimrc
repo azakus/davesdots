@@ -417,6 +417,10 @@ set t_RV=
 " ------ BufExplorer ------
 nnoremap <F3> :BufExplorerVerticalSplit <CR>
 
+" ------ NERDCommenter ------
+let g:NERDSpaceDelims = 1
+let g:NERDRemoveExtraSpaces = 1
+
 " ------ HTML5 Indenting -----
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
