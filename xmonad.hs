@@ -52,8 +52,8 @@ main = do
 			, layoutHook = avoidStruts $ smartBorders myLayoutHook
 			, logHook    = dynamicLogWithPP $ xmobarPP
 				{ ppOutput = hPutStrLn xmproc
-				, ppUrgent = xmobarColor "#CC0000" "" . wrap "**" "**"
-				, ppTitle  = xmobarColor "#8AE234" "" . shorten 80
+				, ppUrgent = xmobarColor "#e5786d" "" . wrap "**" "**"
+				, ppTitle  = xmobarColor "#95e454" "" . shorten 80
 				}
 			, terminal = "xterm"
 			, modMask = mod4Mask
