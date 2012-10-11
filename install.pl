@@ -94,7 +94,7 @@ my %links = (
 	Xmodmap => '.Xmodmap',
 
 	'tmux.conf'                      => '.tmux.conf',
-	'tmux-solarized/tmuxcolors.conf' => '.tmuxcolors.conf',
+	'tmux-solarized/tmuxcolors-256.conf' => '.tmuxcolors.conf',
 
 	'git-prompt' => '.git-prompt'
 );
