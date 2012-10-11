@@ -93,8 +93,8 @@ my %links = (
 	muttrc  => '.muttrc',
 	Xmodmap => '.Xmodmap',
 
-	'tmux.conf'                      => '.tmux.conf',
-	'tmux-solarized/tmuxcolors-256.conf' => '.tmuxcolors.conf',
+	'tmux.conf'      => '.tmux.conf',
+	'tmux-solarized' => '.tmux-solarized',
 
 	'git-prompt' => '.git-prompt'
 );
