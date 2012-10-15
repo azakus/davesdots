@@ -93,3 +93,7 @@ zstyle ':completion:*:scp:*' ignore-line yes
 zstyle ':completion:*:diff:*' ignore-line yes
 zstyle ':completion:*:kill:*' ignore-line yes
 
+# speed up git completions
+__git_files () {
+	_wanted files expl 'local files' _files
+}
