@@ -43,3 +43,6 @@
 [submodule "git-prompt"]
 	path = git-prompt
 	url = https://github.com/azakus/zsh-git-prompt.git
+[submodule "vim/bundle/vim-repeat"]
+	path = vim/bundle/vim-repeat
+	url = https://github.com/tpope/vim-repeat
