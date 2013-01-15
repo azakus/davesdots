@@ -45,3 +45,7 @@
 [user]
 	name = Daniel Freedman
 	email = dfreedm2@gmail.com
+[mergetool "fugitive"]
+	cmd = vim -f -c \"Gdiff\" \"$MERGED\"
+[merge]
+	tool = fugitive
