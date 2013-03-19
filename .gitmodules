@@ -22,9 +22,6 @@
 [submodule "vim/bundle/vim-nginx"]
 	path = vim/bundle/vim-nginx
 	url = https://github.com/jinfield/vim-nginx.git
-[submodule "vim/bundle/css-syntax"]
-	path = vim/bundle/css-syntax
-	url = https://github.com/ChrisYip/Better-CSS-Syntax-for-Vim.git
 [submodule "mutt/mutt-solarized"]
 	path = mutt/mutt-solarized
 	url = https://github.com/altercation/mutt-colors-solarized
