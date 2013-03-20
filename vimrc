@@ -364,9 +364,6 @@ nnoremap <F5> :GundoToggle<CR>
 let g:ackprg="ack -H --nocolor --nogroup --column"
 set t_RV=
 
-" ------ BufExplorer ------
-nnoremap <F3> :BufExplorerVerticalSplit <CR>
-
 " ------ NERDCommenter ------
 let g:NERDSpaceDelims = 1
 let g:NERDRemoveExtraSpaces = 1
