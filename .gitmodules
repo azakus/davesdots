@@ -10,9 +10,6 @@
 [submodule "vim/bundle/NERDtree"]
 	path = vim/bundle/NERDtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "vim/bundle/bufexplorer"]
-	path = vim/bundle/bufexplorer
-	url = https://github.com/vim-scripts/bufexplorer.zip
 [submodule "vim/bundle/NERDcommenter"]
 	path = vim/bundle/NERDcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
@@ -52,3 +49,6 @@
 [submodule "vim/bundle/zencoding"]
 	path = vim/bundle/zencoding
 	url = https://github.com/mattn/zencoding-vim.git
+[submodule "vim/bundle/ctrlp"]
+	path = vim/bundle/ctrlp
+	url = https://github.com/kien/ctrlp.vim
