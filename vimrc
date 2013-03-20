@@ -40,7 +40,7 @@ set wildignore=*.o,*~      " Ignore temp files in wildmenu
 set scrolloff=3            " Show 3 lines of context during scrolls
 set sidescrolloff=2        " Show 2 columns of context during scrolls
 set backspace=2            " Normal backspace behavior
-"set textwidth=80           " Break lines at 80 characters
+set textwidth=80           " Break lines at 80 characters
 set hidden                 " Allow flipping of buffers without saving
 set noerrorbells           " Disable error bells
 set visualbell             " Turn visual bell on
@@ -196,9 +196,6 @@ if has('autocmd')
 
    " fix up JSON rule detection
    autocmd BufRead,BufNewFile *.json :setfiletype javascript
-
-   autocmd BufRead,BufNewFile *
-      \ if &ft == 'javascript' | set ts=4 sw=4 noet | endif
 endif
 
 " ---- cscope/ctags setup ----
@@ -227,33 +224,6 @@ if has('eval')
    endfun
 
    nmap <C-]> :call GoDefinition()<CR>
-endif
-
-if has('autocmd')
-   " Shortcuts
-   if has('eval')
-      fun! <SID>cabbrev()
-         iab #i #include
-         iab #I #include
-
-         iab #d #define
-         iab #D #define
-
-         iab #e #endif
-         iab #E #endif
-      endfun
-
-      autocmd FileType c,cpp :call <SID>cabbrev()
-
-      autocmd BufNewFile,BufRead *.mm set filetype=noweb
-      autocmd BufNewFile,BufRead *.scala set filetype=scala
-      autocmd BufNewFile,BufRead *.proto set filetype=proto
-      autocmd BufNewFile,BufRead *.atomo set filetype=atomo
-      autocmd BufNewFile,BufRead *.atomo setlocal expandtab tabstop=2 shiftwidth=2 softtabstop=2 commentstring=--\ %s
-   endif
-
-   " make tab reindent in normal mode
-   autocmd FileType c,cpp,cs,java nmap <Tab> =0<CR>
 endif
 
 " Append modeline after last line in buffer.
@@ -385,26 +355,6 @@ endif
 if has('eval')
    let python_highlight_all = 1
    let python_slow_sync = 1
-endif
-
-" ---- OmniCpp ----
-if v:version >= 700
-   if has('autocmd')
-      autocmd InsertLeave * if pumvisible() == 0|pclose|endif
-   endif
-
-   set completeopt=menu,menuone,longest
-
-   let OmniCpp_MayCompleteDot = 1 " autocomplete with .
-   let OmniCpp_MayCompleteArrow = 1 " autocomplete with ->
-   let OmniCpp_MayCompleteScope = 1 " autocomplete with ::
-   let OmniCpp_SelectFirstItem = 2 " select first item (but don't insert)
-   let OmniCpp_NamespaceSearch = 2 " search namespaces in this and included files
-   let OmniCpp_ShowPrototypeInAbbr = 1 " show function prototype (i.e. parameters) in popup window
-   map <silent><F11> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<CR><CR>
-   " add current directory's generated tags file to available tags
-   set tags+=tags;
-   set tags+=~/.vim/tags/gl
 endif
 
 " ----- Gundo -----
