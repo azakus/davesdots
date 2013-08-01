@@ -372,3 +372,16 @@ let g:NERDRemoveExtraSpaces = 1
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
+
+" ------ zencoding ------
+let g:user_zen_settings = {
+\  'html': {
+\     'default_attributes': {
+\        'polymer-element': [{'name': ''}, {'attributes': ''}],
+\        'link:import': [{'rel': 'import'}, {'href': ''}]
+\     },
+\     'expandos': {
+\        'polymer-element': 'polymer-element > template + script'
+\     }
+\  }
+\}
