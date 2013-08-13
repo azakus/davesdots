@@ -385,3 +385,11 @@ let g:user_zen_settings = {
 \     }
 \  }
 \}
+
+" ------ airline ------
+let g:airline_enable_branch = 1
+let g:airline_branch_empty_message = ''
+let g:airline_detect_modified = 1
+let g:airline_detect_paste = 1
+let g:airline_inactive_collapse = 1
+let g:airline_theme = 'wombat'
