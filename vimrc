@@ -56,7 +56,7 @@ set diffopt+=iwhite
 if has('eval')
    filetype off
 endif
-call pathogen#runtime_append_all_bundles()
+execute pathogen#infect()
 
 " ---- Filetypes ----
 if has('syntax')
@@ -393,3 +393,4 @@ let g:airline_detect_modified = 1
 let g:airline_detect_paste = 1
 let g:airline_inactive_collapse = 1
 let g:airline_theme = 'wombat'
+let g:airline_detect_whitespace = 1
