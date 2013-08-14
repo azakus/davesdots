@@ -394,3 +394,4 @@ let g:airline_detect_paste = 1
 let g:airline_inactive_collapse = 1
 let g:airline_theme = 'wombat'
 let g:airline_detect_whitespace = 1
+let g:airline_enable_syntastic = 1
