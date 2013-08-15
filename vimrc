@@ -371,8 +371,8 @@ let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
-" ------ zencoding ------
-let g:user_zen_settings = {
+" ------ emmet ------
+let g:user_emmet_settings = {
 \  'html': {
 \     'default_attributes': {
 \        'polymer-element': [{'name': ''}, {'attributes': ''}],
@@ -380,7 +380,8 @@ let g:user_zen_settings = {
 \     },
 \     'expandos': {
 \        'polymer-element': 'polymer-element > template + script'
-\     }
+\     },
+\     'empty_element_suffix': '>'
 \  }
 \}
 
