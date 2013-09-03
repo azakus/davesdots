@@ -293,12 +293,6 @@ if has('eval')
    inoremap <buffer> <C-K> <C-R>=EmacsKill()<CR>
 endif
 
-" w!! for sudo w!
-"cmap w!! w !sudo tee % >/dev/null
-
-" clear search
-"nnoremap <esc> :noh<return><esc>
-
 " Disable q and Q
 map q <Nop>
 map Q <Nop>
@@ -307,9 +301,6 @@ map Q <Nop>
 nmap <silent> <F12> :silent set number!<CR>
 imap <silent> <F12> <C-O>:silent set number!<CR>
 noremap <silent> <F4> :set hls!<CR>
-
-" Map Explore to F2
-nmap <silent> <F2> :NERDTreeToggle<CR>
 
 " Don't force column 0 for #
 inoremap # X<BS>#
@@ -355,14 +346,14 @@ if has('eval')
    let python_slow_sync = 1
 endif
 
+" ----- NERDTree -----
+" Map Explore to F2
+nmap <silent> <F2> :NERDTreeToggle<CR>
+
 " ----- Gundo -----
 nnoremap <F5> :GundoToggle<CR>
 
-" ------ Ack ------
-let g:ackprg="ack -H --nocolor --nogroup --column"
-set t_RV=
-
-" ------ NERDCommenter ------
+" ----- NERDCommenter -----
 let g:NERDSpaceDelims = 1
 let g:NERDRemoveExtraSpaces = 1
 
@@ -371,7 +362,7 @@ let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
-" ------ emmet ------
+" ----- emmet -----
 let g:user_emmet_settings = {
 \  'html': {
 \     'default_attributes': {
@@ -380,12 +371,11 @@ let g:user_emmet_settings = {
 \     },
 \     'expandos': {
 \        'polymer-element': 'polymer-element > template + script'
-\     },
-\     'empty_element_suffix': '>'
+\     }
 \  }
 \}
 
-" ------ airline ------
+" ----- airline -----
 let g:airline_enable_branch = 1
 let g:airline_branch_empty_message = ''
 let g:airline_detect_modified = 1
@@ -394,7 +384,6 @@ let g:airline_inactive_collapse = 1
 let g:airline_theme = 'wombat'
 let g:airline_detect_whitespace = 1
 let g:airline_enable_syntastic = 1
-
 
 " ----- syntastic -----
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
