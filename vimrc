@@ -16,16 +16,10 @@ if has('multi_byte')      " Make sure we have unicode support
 endif
 
 " ---- General Setup ----
-set nocompatible           " Don't emulate vi's limitations
 set tabstop=4              " 4 spaces for tabs
 set shiftwidth=4           " 4 spaces for indents
 set smarttab               " Tab next line based on current line
-"set expandtab             " Spaces for indentation
 set autoindent             " Automatically indent next line
-if has('smartindent')
-   set smartindent            " Indent next line based on current line
-endif
-"set linebreak             " Display long lines wrapped at word boundaries
 set incsearch              " Enable incremental searching
 set hlsearch               " Highlight search matches
 set ignorecase             " Ignore case when searching...
@@ -47,15 +41,12 @@ set visualbell             " Turn visual bell on
 set t_vb=                  " Make the visual bell emit nothing
 set showcmd                " Show the current command
 set number
-
 set diffopt+=iwhite
+set showmatch
+set display+=lastline
+set shiftround
 
-" ------ Pathogen -------
-"  Disable filetype so pathogen can load ftdetect modules
-"  Some system vimrcs do this too early
-if has('eval')
-   filetype off
-endif
+" ---- Pathogen ----
 execute pathogen#infect()
 
 " ---- Filetypes ----
@@ -123,14 +114,6 @@ if has('statusline')
    set statusline=%<%F\ %r[%{&ff}]%y%m\ %=\ Line\ %l\/%L\ Col:\ %v\ (%P)
 endif
 
-" Enable modelines only on secure vim
-if (v:version == 603 && has("patch045")) || (v:version > 603)
-   set modeline
-   set modelines=3
-else
-   set nomodeline
-endif
-
 " Shamelessly stolen from Ciaran McCreesh <ciaranm@ciaranm.org>
 if has('eval')
    fun! LoadColorScheme(schemes)
@@ -178,22 +161,6 @@ endif
 if has('mouse')
    " Dont copy the listchars when copying
    set mouse=nvi
-endif
-
-if has('autocmd')
-   " always refresh syntax from the start
-   autocmd BufEnter * syntax sync fromstart
-
-   " subversion commit messages need not be backed up
-   autocmd BufRead svn-commit.tmp :setlocal nobackup
-
-   " mutt does not like UTF-8
-   autocmd BufRead,BufNewFile *
-      \ if &ft == 'mail' | set fileencoding=iso8859-1 tw=72 | endif
-
-   " fix up procmail rule detection
-   autocmd BufRead procmailrc :setfiletype procmail
-
 endif
 
 " ---- cscope/ctags setup ----
@@ -346,23 +313,28 @@ if has('eval')
    let python_slow_sync = 1
 endif
 
-" ----- NERDTree -----
+" ---- matchit ----
+if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
+   runtime! macros/matchit.vim
+endif
+
+" ---- NERDTree ----
 " Map Explore to F2
 nmap <silent> <F2> :NERDTreeToggle<CR>
 
-" ----- Gundo -----
+" ---- Gundo ----
 nnoremap <F5> :GundoToggle<CR>
 
-" ----- NERDCommenter -----
+" ---- NERDCommenter ----
 let g:NERDSpaceDelims = 1
 let g:NERDRemoveExtraSpaces = 1
 
-" ------ HTML5 Indenting -----
+" ---- HTML5 Indenting ----
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
-" ----- emmet -----
+" ---- emmet ----
 let g:user_emmet_settings = {
 \  'html': {
 \     'default_attributes': {
@@ -375,7 +347,7 @@ let g:user_emmet_settings = {
 \  }
 \}
 
-" ----- airline -----
+" ---- airline ----
 let g:airline_enable_branch = 1
 let g:airline_branch_empty_message = ''
 let g:airline_detect_modified = 1
@@ -385,5 +357,5 @@ let g:airline_theme = 'wombat'
 let g:airline_detect_whitespace = 1
 let g:airline_enable_syntastic = 1
 
-" ----- syntastic -----
+" ---- syntastic ----
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
