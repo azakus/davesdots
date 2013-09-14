@@ -20,6 +20,9 @@ set tabstop=4              " 4 spaces for tabs
 set shiftwidth=4           " 4 spaces for indents
 set smarttab               " Tab next line based on current line
 set autoindent             " Automatically indent next line
+if has('smartindent')
+   set smartindent            " Indent next line based on current line
+endif
 set incsearch              " Enable incremental searching
 set hlsearch               " Highlight search matches
 set ignorecase             " Ignore case when searching...
@@ -43,7 +46,7 @@ set showcmd                " Show the current command
 set number
 set diffopt+=iwhite
 set showmatch
-set display+=lastline
+set display=lastline,uhex
 set shiftround
 
 " ---- Pathogen ----
@@ -161,6 +164,11 @@ endif
 if has('mouse')
    " Dont copy the listchars when copying
    set mouse=nvi
+endif
+
+if has('autocmd')
+   " always refresh syntax from start
+   autocmd BufEnter * syntax sync fromstart
 endif
 
 " ---- cscope/ctags setup ----
