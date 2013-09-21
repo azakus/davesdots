@@ -61,3 +61,6 @@
 [submodule "vim/bundle/emmet-vim"]
 	path = vim/bundle/emmet-vim
 	url = https://github.com/mattn/emmet-vim.git
+[submodule "zsh/zsh-vcs-prompt"]
+	path = zsh/zsh-vcs-prompt
+	url = git://github.com/yonchu/zsh-vcs-prompt.git
