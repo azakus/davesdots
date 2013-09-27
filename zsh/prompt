@@ -59,7 +59,7 @@ ZSH_VCS_PROMPT_GIT_FORMATS+='#h'
 # Stashed
 ZSH_VCS_PROMPT_GIT_FORMATS+='%{%F{cyan}%}#i%{%f%b%}'
 # Clean
-ZSH_VCS_PROMPT_GIT_FORMATS+='%{%F{green}%}#j%{%f%b%}'${PATHCOLOR}']'
+ZSH_VCS_PROMPT_GIT_FORMATS+='%{%F{green}%}#j%{%f%b%}'${PATHCOLOR}'] '
 
 ## Git with Action.
 # VCS name
@@ -81,13 +81,13 @@ ZSH_VCS_PROMPT_GIT_ACTION_FORMATS+='#h'
 # Stashed
 ZSH_VCS_PROMPT_GIT_ACTION_FORMATS+='%{%F{cyan}%}#i%{%f%}'
 # Clean
-ZSH_VCS_PROMPT_GIT_ACTION_FORMATS+='%{%F{green}%}#j%{%f%}'${PATHCOLOR}']'
+ZSH_VCS_PROMPT_GIT_ACTION_FORMATS+='%{%F{green}%}#j%{%f%}'${PATHCOLOR}'] '
 
 ## Other VCS without Action.
 # VCS name
 ZSH_VCS_PROMPT_VCS_FORMATS='(%{%B%F{yellow}%}#s%{%f%b%}'${PATHCOLOR}')'
 # Branch name
-ZSH_VCS_PROMPT_VCS_FORMATS+='[%{%B%F{red}%}#b%{%f%b%}'${PATHCOLOR}']'
+ZSH_VCS_PROMPT_VCS_FORMATS+='[%{%B%F{red}%}#b%{%f%b%}'${PATHCOLOR}'] '
 
 ## Other VCS with Action.
 # VCS name
@@ -95,7 +95,7 @@ ZSH_VCS_PROMPT_VCS_ACTION_FORMATS='(%{%B%F{yellow}%}#s%{%f%b%}'${PATHCOLOR}')'
 # Branch name
 ZSH_VCS_PROMPT_VCS_ACTION_FORMATS+='[%{%B%F{red}%}#b%{%f%b%}'
 # Action
-ZSH_VCS_PROMPT_VCS_ACTION_FORMATS+=${PATHCOLOR}':%{%B%F{red}%}#a%{%f%b%}'${PATHCOLOR}']'
+ZSH_VCS_PROMPT_VCS_ACTION_FORMATS+=${PATHCOLOR}':%{%B%F{red}%}#a%{%f%b%}'${PATHCOLOR}'] '
 
 ## Hide unmerged commits
 ZSH_VCS_PROMPT_MERGE_BRANCH=
@@ -103,6 +103,6 @@ ZSH_VCS_PROMPT_MERGE_BRANCH=
 ## Enable vcs caching
 ZSH_VCS_PROMPT_ENABLE_CACHING='true'
 
-PROMPT=${RESETCOLOR}${HOSTCOLOR}$'%n@'${LHOSTNAME}${BLACKCOLOR}':'${PATHCOLOR}$'%45<...<%~ %<<$(vcs_super_info) %(?..'${BOLDERRORCOLOR}$')%(!.#.$) '${RESETCOLOR}
+PROMPT=${RESETCOLOR}${HOSTCOLOR}$'%n@'${LHOSTNAME}${BLACKCOLOR}':'${PATHCOLOR}$'%45<...<%~ %<<$(vcs_super_info)%(?..'${BOLDERRORCOLOR}$')%(!.#.$) '${RESETCOLOR}
 
 RPROMPT=${RESETCOLOR}$'%1(j.'${JOBCOLOR}$'[%j].)%(?..'${ERRORCOLOR}$'[%?])'${CLOCKCOLOR}$'[%t]'${RESETCOLOR}
