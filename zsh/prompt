@@ -40,6 +40,7 @@ case "${TERM}" in
 		;;
 esac
 
+source ~/.zsh/zsh-vcs-prompt/zshrc.sh
 ## Git without Action.
 # VCS name
 ZSH_VCS_PROMPT_GIT_FORMATS='(%{%B%F{yellow}%}#s%{%f%b%}'${PATHCOLOR}')'
