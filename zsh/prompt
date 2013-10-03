@@ -43,11 +43,11 @@ esac
 source ~/.zsh/zsh-vcs-prompt/zshrc.sh
 ## Git without Action.
 # VCS name
-ZSH_VCS_PROMPT_GIT_FORMATS='(%{%B%F{yellow}%}#s%{%f%b%}'${PATHCOLOR}')'
+ZSH_VCS_PROMPT_GIT_FORMATS='(%{%B%F{yellow}%}#s%{%f%b%}'${HOSTCOLOR}${PATHCOLOR}')'
 # Branch name
 ZSH_VCS_PROMPT_GIT_FORMATS+='[%{%B%F{magent}%}#b%{%f%b%}'
 # Ahead and Behind
-ZSH_VCS_PROMPT_GIT_FORMATS+='#c#d'${PATHCOLOR}'|'
+ZSH_VCS_PROMPT_GIT_FORMATS+='#c#d'${HOSTCOLOR}${PATHCOLOR}'|'
 # Staged
 ZSH_VCS_PROMPT_GIT_FORMATS+='%{%F{blue}%}#e%{%f%b%}'
 # Conflicts
@@ -59,17 +59,17 @@ ZSH_VCS_PROMPT_GIT_FORMATS+='#h'
 # Stashed
 ZSH_VCS_PROMPT_GIT_FORMATS+='%{%F{cyan}%}#i%{%f%b%}'
 # Clean
-ZSH_VCS_PROMPT_GIT_FORMATS+='%{%F{green}%}#j%{%f%b%}'${PATHCOLOR}'] '
+ZSH_VCS_PROMPT_GIT_FORMATS+='%{%F{green}%}#j%{%f%b%}'${HOSTCOLOR}${PATHCOLOR}'] '
 
 ## Git with Action.
 # VCS name
-ZSH_VCS_PROMPT_GIT_ACTION_FORMATS='(%{%B%F{yellow}%}#s%{%f%b%}'${PATHCOLOR}')'
+ZSH_VCS_PROMPT_GIT_ACTION_FORMATS='(%{%B%F{yellow}%}#s%{%f%b%}'${HOSTCOLOR}${PATHCOLOR}')'
 # Branch name
 ZSH_VCS_PROMPT_GIT_ACTION_FORMATS+='[%{%B%F{magenta}%}#b%{%f%b%}'
 # Action
-ZSH_VCS_PROMPT_GIT_ACTION_FORMATS+=${PATHCOLOR}':%{%B%F{white}%}#a%{%f%b%}'
+ZSH_VCS_PROMPT_GIT_ACTION_FORMATS+=${HOSTCOLOR}${PATHCOLOR}':%{%B%F{white}%}#a%{%f%b%}'
 # Ahead and Behind
-ZSH_VCS_PROMPT_GIT_ACTION_FORMATS+='#c#d'${PATHCOLOR}'|'
+ZSH_VCS_PROMPT_GIT_ACTION_FORMATS+='#c#d'${HOSTCOLOR}${PATHCOLOR}'|'
 # Staged
 ZSH_VCS_PROMPT_GIT_ACTION_FORMATS+='%{%F{blue}%}#e%{%f%}'
 # Conflicts
@@ -81,21 +81,21 @@ ZSH_VCS_PROMPT_GIT_ACTION_FORMATS+='#h'
 # Stashed
 ZSH_VCS_PROMPT_GIT_ACTION_FORMATS+='%{%F{cyan}%}#i%{%f%}'
 # Clean
-ZSH_VCS_PROMPT_GIT_ACTION_FORMATS+='%{%F{green}%}#j%{%f%}'${PATHCOLOR}'] '
+ZSH_VCS_PROMPT_GIT_ACTION_FORMATS+='%{%F{green}%}#j%{%f%}'${HOSTCOLOR}${PATHCOLOR}'] '
 
 ## Other VCS without Action.
 # VCS name
-ZSH_VCS_PROMPT_VCS_FORMATS='(%{%B%F{yellow}%}#s%{%f%b%}'${PATHCOLOR}')'
+ZSH_VCS_PROMPT_VCS_FORMATS='(%{%B%F{yellow}%}#s%{%f%b%}'${HOSTCOLOR}${PATHCOLOR}')'
 # Branch name
-ZSH_VCS_PROMPT_VCS_FORMATS+='[%{%B%F{red}%}#b%{%f%b%}'${PATHCOLOR}'] '
+ZSH_VCS_PROMPT_VCS_FORMATS+='[%{%B%F{red}%}#b%{%f%b%}'${HOSTCOLOR}${PATHCOLOR}'] '
 
 ## Other VCS with Action.
 # VCS name
-ZSH_VCS_PROMPT_VCS_ACTION_FORMATS='(%{%B%F{yellow}%}#s%{%f%b%}'${PATHCOLOR}')'
+ZSH_VCS_PROMPT_VCS_ACTION_FORMATS='(%{%B%F{yellow}%}#s%{%f%b%}'${HOSTCOLOR}${PATHCOLOR}')'
 # Branch name
 ZSH_VCS_PROMPT_VCS_ACTION_FORMATS+='[%{%B%F{red}%}#b%{%f%b%}'
 # Action
-ZSH_VCS_PROMPT_VCS_ACTION_FORMATS+=${PATHCOLOR}':%{%B%F{red}%}#a%{%f%b%}'${PATHCOLOR}'] '
+ZSH_VCS_PROMPT_VCS_ACTION_FORMATS+=${HOSTCOLOR}${PATHCOLOR}':%{%B%F{red}%}#a%{%f%b%}'${HOSTCOLOR}${PATHCOLOR}'] '
 
 ## Hide unmerged commits
 ZSH_VCS_PROMPT_MERGE_BRANCH=
