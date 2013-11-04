@@ -135,9 +135,9 @@ if has('eval')
    endfun
 
    if has("gui_running")
-      call LoadColorScheme("wombat256mod:twilight256:desert")
+      call LoadColorScheme("zenburn:wombat256mod:twilight256:desert")
    elseif &t_Co == 256
-      call LoadColorScheme("wombat256mod:twilight256:inkpot")
+      call LoadColorScheme("zenburn:wombat256mod:twilight256:inkpot")
    elseif &t_Co == 88
       call LoadColorScheme("wombat:zellner")
    else
@@ -361,7 +361,11 @@ let g:airline_branch_empty_message = ''
 let g:airline_detect_modified = 1
 let g:airline_detect_paste = 1
 let g:airline_inactive_collapse = 1
-let g:airline_theme = 'wombat'
+if exists("g:colors_name")
+   if g:colors_name == 'wombat256mod'
+      let g:airline_theme = 'wombat'
+   endif
+endif
 let g:airline_detect_whitespace = 1
 let g:airline_enable_syntastic = 1
 
