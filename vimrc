@@ -371,3 +371,4 @@ let g:airline_enable_syntastic = 1
 
 " ---- syntastic ----
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
+let g:syntastic_check_on_open = 1

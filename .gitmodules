@@ -61,3 +61,6 @@
 [submodule "zsh/zsh-vcs-prompt"]
 	path = zsh/zsh-vcs-prompt
 	url = git://github.com/yonchu/zsh-vcs-prompt.git
+[submodule "vim/bundle/vim-indent-guides"]
+	path = vim/bundle/vim-indent-guides
+	url = https://github.com/nathanaelkane/vim-indent-guides.git
