@@ -370,5 +370,6 @@ let g:airline_detect_whitespace = 1
 let g:airline_enable_syntastic = 1
 
 " ---- syntastic ----
-let syntastic_mode_map = { 'passive_filetypes': ['html'] }
+let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
+let g:syntastic_ignore_files=['\.min\.js$']
 let g:syntastic_check_on_open = 1
