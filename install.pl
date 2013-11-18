@@ -70,10 +70,10 @@ my %links = (
 	'uncrustify.cfg' => '.uncrustify.cfg',
 	'indent.pro'     => '.indent.pro',
 
-	xmobarrc    => '.xmobarrc',
-	'xmonad.hs' => '.xmonad/xmonad.hs',
+#	xmobarrc    => '.xmobarrc',
+#	'xmonad.hs' => '.xmonad/xmonad.hs',
 
-	'Wombat.xccolortheme'  => 'Library/Application Support/Xcode/Color Themes/Wombat.xccolortheme',
+#	'Wombat.xccolortheme'  => 'Library/Application Support/Xcode/Color Themes/Wombat.xccolortheme',
 #	'Wombat.dvtcolortheme' => 'Library/Developer/Xcode/UserData/FontAndColorThemes/Wombat.dvtcolortheme',
 
 	gitconfig => '.gitconfig',
@@ -81,7 +81,7 @@ my %links = (
 
 	tigrc     => '.tigrc',
 
-	caffeinate => 'bin/caffeinate',
+#	caffeinate => 'bin/caffeinate',
 	lock       => 'bin/lock',
 
 	'git-info'            => 'bin/git-info',
@@ -89,14 +89,12 @@ my %links = (
 	'git-untrack-ignored' => 'bin/git-untracked-ignored',
 
 	gdbinit => '.gdbinit',
-	mutt    => '.mutt',
-	muttrc  => '.muttrc',
+#	mutt    => '.mutt',
+#	muttrc  => '.muttrc',
 	Xmodmap => '.Xmodmap',
 
 	'tmux.conf'      => '.tmux.conf',
-	'tmux-solarized' => '.tmux-solarized',
-
-	'git-prompt' => '.git-prompt'
+	'tmux-solarized' => '.tmux-solarized'
 );
 
 my $contained = (substr $scriptdir, 0, length($home)) eq $home;
