@@ -25,9 +25,6 @@
 [submodule "tmux-solarized"]
 	path = tmux-solarized
 	url = https://github.com/seebi/tmux-colors-solarized.git
-[submodule "vim/bundle/vim-webcomponents"]
-	path = vim/bundle/vim-webcomponents
-	url = https://github.com/azakus/vim-webcomponents.git
 [submodule "vim/bundle/vim-surround"]
 	path = vim/bundle/vim-surround
 	url = https://github.com/tpope/vim-surround.git
