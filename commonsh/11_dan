@@ -1,4 +1,4 @@
-# !/bin/sh
+#!/bin/sh
 
 # Aliases
 if command -v xrandr >/dev/null 2>&1; then
@@ -29,9 +29,14 @@ export PERL_MM_OPT="INSTALL_BASE=${HOME}/.perl5";
 export PERL5LIB=`perl -MConfig -e 'print "$ENV{HOME}/.perl5/lib/perl5/$Config{archname}:$ENV{HOME}/.perl5/lib/perl5"'`;
 concat_path "${HOME}/.perl5/bin"
 
-# Homebrew python
+# Homebrew
 if [ -d $HOME/homebrew ]; then
    export PYTHONPATH=$HOME/homebrew/lib/python`python -c 'import sys; print(sys.version[:3])'`/site-packages:$PYTHONPATH
+
+   brew-rmdeps(){
+      brew rm $1
+      brew rm $(join <(brew leaves) <(brew deps $1))
+   }
 fi
 
 # disable flow control
