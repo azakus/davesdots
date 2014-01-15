@@ -48,6 +48,8 @@ set diffopt+=iwhite
 set showmatch
 set display=lastline,uhex
 set shiftround
+set splitbelow             " make new horizontal splits below
+set splitright             " make new horizontal splits to the right
 
 " ---- Pathogen ----
 execute pathogen#infect()
