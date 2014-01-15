@@ -373,3 +373,6 @@ let g:airline_enable_syntastic = 1
 let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
 let g:syntastic_ignore_files=['\.min\.js$']
 let g:syntastic_check_on_open = 1
+
+" ---- markdown ----
+let g:vim_markdown_folding_disabled = 1
