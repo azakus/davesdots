@@ -50,6 +50,7 @@ set display=lastline,uhex
 set shiftround
 set splitbelow             " make new horizontal splits below
 set splitright             " make new horizontal splits to the right
+let mapleader=","          " comma is leader
 
 " ---- Pathogen ----
 execute pathogen#infect()
@@ -75,8 +76,8 @@ if has('eval')
       endif
    endfun
 
-   let g:detectindent_preferred_expandtab = 0
-   let g:detectindent_preferred_indent = 4
+   let g:detectindent_preferred_expandtab = 1
+   let g:detectindent_preferred_indent = 2
 
    fun! <SID>DetectDetectIndent()
       try
@@ -105,8 +106,7 @@ if (v:version >= 700)
    set spelllang=en_us        " US English Spelling please
 
    " Toggle spellchecking with F10
-   nmap <silent> <F10> :silent set spell!<CR>
-   imap <silent> <F10> <C-O>:silent set spell!<CR>
+   nnoremap <silent><leader>s :set spell!<CR>
 endif
 
 " Display a pretty statusline if we can
@@ -274,10 +274,18 @@ endif
 map q <Nop>
 map Q <Nop>
 
-" Toggle numbers with F12
-nmap <silent> <F12> :silent set number!<CR>
-imap <silent> <F12> <C-O>:silent set number!<CR>
-noremap <silent> <F4> :set hls!<CR>
+" Toggle numbers with <leader>n
+nnoremap <silent><leader>n :set number!<CR>
+nnoremap <silent><leader><space> :set hls!<CR>
+function! ToggleNumber()
+   if(&relativenumber == 1)
+      set norelativenumber
+      set number
+   else
+      set relativenumber
+   endif
+endfunc
+nmap <silent><leader>r :call ToggleNumber()<CR>
 
 " Don't force column 0 for #
 inoremap # X<BS>#
@@ -312,6 +320,9 @@ if (&term =~ "^xterm")
    map! <C-[>[5C <C-Right>
 endif
 
+" highlight last inserted text
+nnoremap gV `[v`]
+
 " Terminal.app does not support back color erase
 if ($TERM_PROGRAM ==# "Apple_Terminal" && $TERM_PROGRAM_VERSION <= 273)
    set t_ut=
@@ -330,10 +341,10 @@ endif
 
 " ---- NERDTree ----
 " Map Explore to F2
-nmap <silent> <F2> :NERDTreeToggle<CR>
+nnoremap <leader>t :NERDTreeToggle<CR>
 
 " ---- Gundo ----
-nnoremap <F5> :GundoToggle<CR>
+nnoremap <leader>u :GundoToggle<CR>
 
 " ---- NERDCommenter ----
 let g:NERDSpaceDelims = 1
