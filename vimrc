@@ -16,12 +16,13 @@ if has('multi_byte')      " Make sure we have unicode support
 endif
 
 " ---- General Setup ----
-set tabstop=4              " 4 spaces for tabs
-set shiftwidth=4           " 4 spaces for indents
+set tabstop=2              " 2 spaces for tabs
+set shiftwidth=2           " 2 spaces for indents
+set expandtab              " use spaces
 set smarttab               " Tab next line based on current line
 set autoindent             " Automatically indent next line
 if has('smartindent')
-   set smartindent            " Indent next line based on current line
+   set smartindent         " Indent next line based on current line
 endif
 set incsearch              " Enable incremental searching
 set hlsearch               " Highlight search matches
@@ -51,9 +52,14 @@ set shiftround
 set splitbelow             " make new horizontal splits below
 set splitright             " make new horizontal splits to the right
 let mapleader=","          " comma is leader
+set shortmess=atI          " use a lot of abbreviations
+set laststatus=2           " always show a statusline
 
 " ---- Pathogen ----
 execute pathogen#infect()
+
+" ---- Load colorscheme after pathogen ----
+colorscheme jellybeans
 
 " ---- Filetypes ----
 if has('syntax')
@@ -113,39 +119,10 @@ endif
 if has('title')
    set title
 endif
-set laststatus=2
-set shortmess=atI
 if has('statusline')
    set statusline=%<%F\ %r[%{&ff}]%y%m\ %=\ Line\ %l\/%L\ Col:\ %v\ (%P)
 endif
 
-" Shamelessly stolen from Ciaran McCreesh <ciaranm@ciaranm.org>
-if has('eval')
-   fun! LoadColorScheme(schemes)
-      let l:schemes = a:schemes . ":"
-
-      while l:schemes != ""
-         let l:scheme = strpart(l:schemes, 0, stridx(l:schemes, ":"))
-         let l:schemes = strpart(l:schemes, stridx(l:schemes, ":") + 1)
-
-         try
-            exec "colorscheme" l:scheme
-            break
-         catch
-         endtry
-      endwhile
-   endfun
-
-   if has("gui_running")
-      call LoadColorScheme("zenburn:wombat256mod:twilight256:desert")
-   elseif &t_Co == 256
-      call LoadColorScheme("zenburn:wombat256mod:twilight256:inkpot")
-   elseif &t_Co == 88
-      call LoadColorScheme("wombat:zellner")
-   else
-      call LoadColorScheme("desert:darkblue:zellner")
-   endif
-endif
 
 " Show trailing whitespace visually
 " Shamelessly stolen from Ciaran McCreesh <ciaranm@gentoo.org>
@@ -374,18 +351,14 @@ let g:airline_branch_empty_message = ''
 let g:airline_detect_modified = 1
 let g:airline_detect_paste = 1
 let g:airline_inactive_collapse = 1
-if exists("g:colors_name")
-   if g:colors_name == 'wombat256mod'
-      let g:airline_theme = 'wombat'
-   endif
-endif
 let g:airline_detect_whitespace = 1
 let g:airline_enable_syntastic = 1
 
 " ---- syntastic ----
 let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
-let g:syntastic_ignore_files=['\.min\.js$']
-let g:syntastic_check_on_open = 1
+let g:syntastic_ignore_files = ['\.min\.js$']
+" let g:syntastic_check_on_open = 1
+nnoremap <silent><leader>sc :call SyntasticCheck()
 
 " ---- markdown ----
 let g:vim_markdown_folding_disabled = 1
