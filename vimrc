@@ -358,6 +358,8 @@ let g:airline_enable_syntastic = 1
 let g:syntastic_mode_map = { 'passive_filetypes': ['html'] }
 let g:syntastic_ignore_files = ['\.min\.js$']
 " let g:syntastic_check_on_open = 1
+" Jump to first error line
+let g:syntastic_auto_jump = 2
 nnoremap <silent><leader>sc :SyntasticCheck<CR>
 nnoremap <silent><leader>se :Errors<CR>
 
