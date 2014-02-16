@@ -23,6 +23,7 @@
 	ls   = show
 	type = cat-file -t
 	dump = cat-file -p
+	update-submodules = !git submodule foreach git pull origin master
 
 	untrack-ignored = !git-untracked-ignored
 	info = !git-info
