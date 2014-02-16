@@ -41,7 +41,7 @@
 	excludesfile = ~/.gitignore
 	safecrlf = true
 [push]
-	default = matching
+	default = simple
 [user]
 	name = Daniel Freedman
 	email = dfreedm2@gmail.com
