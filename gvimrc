@@ -15,7 +15,7 @@ set guioptions-=a       " Share the copy buffer with visual mode
 " gtk tabs are ugly
 if has('gui_gtk')
     set guioptions-=e       " Kill off the GUI tabs
-    set guifont=monospace\ 9
+    set guifont=monospace\ 10
 elseif has('gui_macvim')
-    set guifont=menlo:h11
+    set guifont=menlo:h12
 endif
