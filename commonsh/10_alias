@@ -97,3 +97,7 @@ alias du='du -h'
 alias ping='ping -c4'
 
 command -v time >/dev/null 2>&1 && alias time='command time'
+
+if command -v tmux >/dev/null 2>&1; then
+	alias dan='tmux -u new -As dan'
+fi
