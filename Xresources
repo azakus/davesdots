@@ -79,6 +79,10 @@ URxvt*foreground: #CCCCCC
 
 URxvt*termName: rxvt-256color
 
+! Disable perl extensions in urxvt
+Urxvt*perl-ext:
+Urxvt*perl-ext-common:
+
 URxvt*color0: #2E3436
 URxvt*color1: #CC0000
 URxvt*color2: #4E9A06
