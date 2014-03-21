@@ -8,7 +8,7 @@ if has('multi_byte')      " Make sure we have unicode support
 
    " ---- Terminal Setup ----
    if ($ANSWERBACK !=# "PuTTY")
-      if (&termencoding == "" && (&term =~ "xterm" || &term =~ "putty")) || (&term =~ "rxvt-unicode") || (&term =~ "screen")
+      if (&termencoding == "" && (&term =~ "xterm" || &term =~ "putty")) || (&term =~ "rxvt-unicode") || (&term =~ "rxvt-256color") || (&term =~ "screen")
          set termencoding=utf-8
       endif
    endif

@@ -70,12 +70,14 @@ UXTerm*color15: #EEEEEC
 UXTerm*toolBar: false
 
 /* URxvt */
-URxvt*font: xft:Monospace-10
+URxvt*font: xft:Monospace:size=10
+URxvt*scrollBar: false
+URxvt*letterSpace: -1
 
 URxvt*background: black
 URxvt*foreground: #CCCCCC
 
-URxvt*termName: rxvt-unicode
+URxvt*termName: rxvt-256color
 
 URxvt*color0: #2E3436
 URxvt*color1: #CC0000
