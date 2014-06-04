@@ -91,7 +91,9 @@ if command -v infocmp >/dev/null 2>&1 ; then
 
 	case $TERM in
 		*256*)
-			alias screen="screen -T `fix_term xterm-256color`"
+			if command -v screen >/dev/null 2>&1; then
+				alias screen="screen -T `fix_term xterm-256color`"
+			fi
 		;;
 		linux)
 			# Tango palette for framebuffers
