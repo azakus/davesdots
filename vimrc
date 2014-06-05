@@ -117,15 +117,6 @@ if (v:version >= 700)
    nnoremap <silent><leader>s :set spell!<CR>
 endif
 
-" Display a pretty statusline if we can
-if has('title')
-   set title
-endif
-if has('statusline')
-   set statusline=%<%F\ %r[%{&ff}]%y%m\ %=\ Line\ %l\/%L\ Col:\ %v\ (%P)
-endif
-
-
 " Show trailing whitespace visually
 " Shamelessly stolen from Ciaran McCreesh <ciaranm@gentoo.org>
 if (&termencoding == "utf-8") || has("gui_running")
@@ -255,7 +246,7 @@ map Q <Nop>
 
 " Toggle numbers with <leader>n
 nnoremap <silent><leader>n :set number!<CR>
-nnoremap <silent><leader><space> :set hls!<CR>
+nnoremap <silent><leader><space> :noh<CR>
 function! ToggleNumber()
    if(&relativenumber == 1)
       set norelativenumber
@@ -367,3 +358,6 @@ nnoremap <silent><leader>se :Errors<CR>
 
 " ---- markdown ----
 let g:vim_markdown_folding_disabled = 1
+
+" ---- CtrlP ----
+nnoremap <silent><leader>b :CtrlPBuffer<CR>
