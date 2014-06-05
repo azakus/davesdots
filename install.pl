@@ -81,6 +81,7 @@ my %links = (
 
 #	caffeinate => 'bin/caffeinate',
 	lock       => 'bin/lock',
+	ctrlcv     => 'bin/ctrlcv',
 
 	'git-info'            => 'bin/git-info',
 	'git-sparse'          => 'bin/git-sparse',

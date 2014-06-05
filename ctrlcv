@@ -1,0 +1,27 @@
+#!/bin/bash
+COMMAND=$1
+
+copy() {
+  if command -v pbcopy 2>&1 >/dev/null; then
+    pbcopy <&0
+  elif command -v xclip 2>&1 >/dev/null; then
+    xclip -i -selection clipboard <&0
+  fi
+}
+
+paste() {
+  if command -v pbcopy 2>&1 >/dev/null; then
+    pbpaste
+  elif command -v xclip 2>&1 >/dev/null; then
+    xclip -o -selection clipboard
+  fi
+}
+
+case $COMMAND in
+  c)
+    copy
+    ;;
+  v)
+    paste
+    ;;
+esac
