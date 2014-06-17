@@ -67,7 +67,7 @@ if command -v infocmp >/dev/null 2>&1 ; then
 	esac
 
 	if [ -n "${COLORTERM}" -o -n "${XTERM_VERSION}" -o -n "${TERM_PROGRAM}" ]; then
-		if [ "${COLORTERM}" = "gnome-terminal" ] ; then
+		if [ "${COLORTERM}" = "gnome-terminal" ] || [ "${COLORTERM}" = "xfce4-terminal" ]; then
 			TERM="xterm-256color"
 		fi
 	elif [ -n "${SSH_TTY}" ] ; then
