@@ -15,7 +15,13 @@ set guioptions-=a       " Share the copy buffer with visual mode
 " gtk tabs are ugly
 if has('gui_gtk')
     set guioptions-=e       " Kill off the GUI tabs
-    set guifont=monospace\ 10
+    set guifont=Terminus\ 10
+    if &guifont == 'Terminus 10'
+        " Terminus 4.39+ has powerline symbols
+        let g:airline_powerline_fonts = 1
+    else
+        set guifont=monospace\ 10
+    endif
 elseif has('gui_macvim')
     set guifont=menlo:h12
 endif
