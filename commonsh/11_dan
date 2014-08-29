@@ -47,4 +47,8 @@ if [ -d ${HOME}/.nvm ]; then
    . ${HOME}/.nvm/nvm.sh
 fi
 
+if command -v npm >/dev/null 2>&1; then
+   . <(npm completion)
+fi
+
 # vim: set ft=sh ts=3 sw=3 et:
