@@ -1,3 +1,55 @@
+! Base16 Eighties
+! Scheme: Chris Kempson (http://chriskempson.com)
+
+#define base00 #2d2d2d
+#define base01 #393939
+#define base02 #515151
+#define base03 #747369
+#define base04 #a09f93
+#define base05 #d3d0c8
+#define base06 #e8e6df
+#define base07 #f2f0ec
+#define base08 #f2777a
+#define base09 #f99157
+#define base0A #ffcc66
+#define base0B #99cc99
+#define base0C #66cccc
+#define base0D #6699cc
+#define base0E #cc99cc
+#define base0F #d27b53
+
+*.foreground:   base05
+*.background:   base00
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06
+
 /* XFT */
 Xft*dpi: 96
 Xft*antialias: true
@@ -19,23 +71,6 @@ XTerm*eightBitInput: false
 XTerm*eightBitOutput: true
 XTerm*eightBitControl: false
 
-XTerm*color0: #2E3436
-XTerm*color1: #CC0000
-XTerm*color2: #4E9A06
-XTerm*color3: #C4A000
-XTerm*color4: #3465A4
-XTerm*color5: #75507B
-XTerm*color6: #06989A
-XTerm*color7: #D3D7CF
-XTerm*color8: #555753
-XTerm*color9: #EF2929
-XTerm*color10: #8AE234
-XTerm*color11: #FCE94F
-XTerm*color12: #729FCF
-XTerm*color13: #AD7FA8
-XTerm*color14: #34E2E2
-XTerm*color15: #EEEEEC
-
 XTerm*toolBar: false
 
 /* UXTerm */
@@ -49,23 +84,6 @@ UXTerm*termName: xterm-256color
 UXTerm*eightBitInput: false
 UXTerm*eightBitOutput: true
 UXTerm*eightBitControl: false
-
-UXTerm*color0: #2E3436
-UXTerm*color1: #CC0000
-UXTerm*color2: #4E9A06
-UXTerm*color3: #C4A000
-UXTerm*color4: #3465A4
-UXTerm*color5: #75507B
-UXTerm*color6: #06989A
-UXTerm*color7: #D3D7CF
-UXTerm*color8: #555753
-UXTerm*color9: #EF2929
-UXTerm*color10: #8AE234
-UXTerm*color11: #FCE94F
-UXTerm*color12: #729FCF
-UXTerm*color13: #AD7FA8
-UXTerm*color14: #34E2E2
-UXTerm*color15: #EEEEEC
 
 UXTerm*toolBar: false
 
@@ -82,23 +100,6 @@ URxvt*termName: rxvt-256color
 ! Disable perl extensions in urxvt
 Urxvt*perl-ext:
 Urxvt*perl-ext-common:
-
-URxvt*color0: #2E3436
-URxvt*color1: #CC0000
-URxvt*color2: #4E9A06
-URxvt*color3: #C4A000
-URxvt*color4: #3465A4
-URxvt*color5: #75507B
-URxvt*color6: #06989A
-URxvt*color7: #D3D7CF
-URxvt*color8: #555753
-URxvt*color9: #EF2929
-URxvt*color10: #8AE234
-URxvt*color11: #FCE94F
-URxvt*color12: #729FCF
-URxvt*color13: #AD7FA8
-URxvt*color14: #34E2E2
-URxvt*color15: #EEEEEC
 
 /* Rxvt */
 Rxvt*termName: rxvt
