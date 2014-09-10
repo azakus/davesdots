@@ -59,9 +59,10 @@ set laststatus=2           " always show a statusline
 execute pathogen#infect()
 
 " ---- Load colorscheme after pathogen ----
-"  Jellybeans doesn't like my tty colors
-let g:jellybeans_use_lowcolor_black=0
-colorscheme jellybeans
+set background=dark
+let base16colorspace=256
+colorscheme base16-eighties
+
 
 " ---- Filetypes ----
 if has('syntax')
