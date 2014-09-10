@@ -59,10 +59,9 @@ set laststatus=2           " always show a statusline
 execute pathogen#infect()
 
 " ---- Load colorscheme after pathogen ----
-set background=dark
 let base16colorspace=256
+set background=dark
 colorscheme base16-eighties
-
 
 " ---- Filetypes ----
 if has('syntax')
