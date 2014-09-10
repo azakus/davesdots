@@ -96,23 +96,23 @@ if command -v infocmp >/dev/null 2>&1 ; then
 			fi
 		;;
 		linux)
-			# Tango palette for framebuffers
-			printf "\033]P02e3436" #black
-			printf "\033]P8555753" #darkgray
-			printf "\033]P1cc0000" #darkred
-			printf "\033]P9ef2929" #red
-			printf "\033]P24e9a06" #darkgreen
-			printf "\033]PA8ae234" #green
-			printf "\033]P3c4a000" #brown
-			printf "\033]PBfce94f" #yellow
-			printf "\033]P43465a4" #darkblue
-			printf "\033]PC729fcf" #blue
-			printf "\033]P575507b" #darkmagenta
-			printf "\033]PDad7fa8" #magenta
-			printf "\033]P606989a" #darkcyan
-			printf "\033]PE34e2e2" #cyan
-			printf "\033]P7ffffff" #lightgray
-			printf "\033]PFeeeeec" #white
+			# Base16 Eighties palette for framebuffers
+			printf "\033]P02d2d2d"
+			printf "\033]P1f2777a"
+			printf "\033]P299cc99"
+			printf "\033]P3ffcc66"
+			printf "\033]P46699cc"
+			printf "\033]P5cc99cc"
+			printf "\033]P666cccc"
+			printf "\033]P7d3d0c8"
+			printf "\033]P8747369"
+			printf "\033]P9f2777a"
+			printf "\033]PA99cc99"
+			printf "\033]PBffcc66"
+			printf "\033]PC6699cc"
+			printf "\033]PDcc99cc"
+			printf "\033]PE66cccc"
+			printf "\033]PFf2f0ec"
 		;;
 	esac
 fi
