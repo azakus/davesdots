@@ -55,8 +55,29 @@ let mapleader=","          " comma is leader
 set shortmess=atI          " use a lot of abbreviations
 set laststatus=2           " always show a statusline
 
-" ---- Pathogen ----
-execute pathogen#infect()
+" ---- plug ----
+call plug#begin('~/.vim/bundle')
+Plug 'mileszs/ack.vim'
+Plug 'sjl/gundo.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/syntastic'
+Plug 'godlygeek/tabular'
+Plug 'jinfield/vim-nginx'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-fugitive'
+Plug 'vim-perl/vim-perl'
+Plug 'othree/html5.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'bling/vim-airline'
+Plug 'elzr/vim-json'
+Plug 'mattn/emmet-vim'
+Plug 'plasticboy/vim-markdown'
+Plug 'rking/ag.vim'
+Plug 'jaxbot/github-issues.vim'
+call plug#end()
 
 " ---- Load colorscheme after pathogen ----
 let base16colorspace=256
