@@ -70,16 +70,9 @@ my %links = (
 	'uncrustify.cfg' => '.uncrustify.cfg',
 	'indent.pro'     => '.indent.pro',
 
-#	xmobarrc    => '.xmobarrc',
-#	'xmonad.hs' => '.xmonad/xmonad.hs',
-
-#	'Wombat.xccolortheme'  => 'Library/Application Support/Xcode/Color Themes/Wombat.xccolortheme',
-#	'Wombat.dvtcolortheme' => 'Library/Developer/Xcode/UserData/FontAndColorThemes/Wombat.dvtcolortheme',
-
 	gitconfig => '.gitconfig',
 	gitignore => '.gitignore',
 
-#	caffeinate => 'bin/caffeinate',
 	lock       => 'bin/lock',
 	ctrlcv     => 'bin/ctrlcv',
 
@@ -88,8 +81,6 @@ my %links = (
 	'git-untrack-ignored' => 'bin/git-untracked-ignored',
 
 	gdbinit => '.gdbinit',
-#	mutt    => '.mutt',
-#	muttrc  => '.muttrc',
 	Xmodmap => '.Xmodmap',
 
 	'tmux.conf'      => '.tmux.conf',
