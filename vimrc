@@ -382,3 +382,6 @@ let g:vim_markdown_folding_disabled = 1
 
 " ---- CtrlP ----
 nnoremap <silent><leader>b :CtrlPBuffer<CR>
+let g:ctrlp_custom_ignore = {
+\ 'dir': '\v[\/](node_modules|bower_components)'
+\}
