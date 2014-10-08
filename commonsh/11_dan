@@ -42,6 +42,9 @@ fi
 # disable flow control
 stty -ixon -ixoff 2>/dev/null
 
+export GOPATH="${HOME}/go"
+concat_path "${GOPATH}/bin"
+
 # enable node version manager
 if [ -d ${HOME}/.nvm ]; then
    . ${HOME}/.nvm/nvm.sh
@@ -50,8 +53,5 @@ fi
 if command -v npm >/dev/null 2>&1; then
    . <(npm completion)
 fi
-
-export GOPATH="${HOME}/go"
-concat_path "${GOPATH}/bin"
 
 # vim: set ft=sh ts=3 sw=3 et:
