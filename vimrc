@@ -60,7 +60,6 @@ call plug#begin('~/.vim/bundle')
 Plug 'mileszs/ack.vim'
 Plug 'sjl/gundo.vim'
 Plug 'pangloss/vim-javascript'
-Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/syntastic'
 Plug 'godlygeek/tabular'
@@ -77,6 +76,7 @@ Plug 'mattn/emmet-vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'rking/ag.vim'
 Plug 'jaxbot/github-issues.vim'
+Plug 'jeetsukumaran/vim-filebeagle'
 call plug#end()
 
 " ---- Load colorscheme after pathogen ----
@@ -329,10 +329,6 @@ endif
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
    runtime! macros/matchit.vim
 endif
-
-" ---- NERDTree ----
-" Map Explore to F2
-nnoremap <leader>t :NERDTreeToggle<CR>
 
 " ---- Gundo ----
 nnoremap <leader>u :GundoToggle<CR>
