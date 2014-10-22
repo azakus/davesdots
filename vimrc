@@ -325,6 +325,21 @@ if has('eval')
    let python_slow_sync = 1
 endif
 
+" call functions and preserve state
+fun! Preserve(command)
+   " save cursor position and search
+   let _s = @/
+   let l = line(".")
+   let c = col(".")
+   execute a:command
+   " restore saved state
+   let @/ = _s
+   call cursor(l, c)
+endfun
+
+" remove trailing whitespace
+nnoremap <silent><leader>ws :call Preserve("%s/\\s\\+$//e")<CR>
+
 " ---- matchit ----
 if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &rtp) ==# ''
    runtime! macros/matchit.vim

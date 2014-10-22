@@ -48,6 +48,6 @@
 	name = Daniel Freedman
 	email = dfreedm2@gmail.com
 [mergetool "fugitive"]
-	cmd = vim -f -c \"Gdiff\" \"$MERGED\"
+	cmd = vim -f -c \"Gvdiff\" \"$MERGED\"
 [merge]
 	tool = fugitive
