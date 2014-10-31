@@ -77,12 +77,12 @@ Plug 'plasticboy/vim-markdown'
 Plug 'rking/ag.vim'
 Plug 'jaxbot/github-issues.vim'
 Plug 'jeetsukumaran/vim-filebeagle'
+Plug 'nanotech/jellybeans.vim'
 call plug#end()
 
 " ---- Load colorscheme after pathogen ----
-let base16colorspace=256
 set background=dark
-colorscheme base16-eighties
+colorscheme jellybeans
 
 " ---- Filetypes ----
 if has('syntax')

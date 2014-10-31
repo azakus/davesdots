@@ -44,9 +44,6 @@ XTerm*utf8: 1
 
 XTerm*faceName: Monospace:style=Regular:size=10
 
-XTerm*background: black
-XTerm*foreground: #CCCCCC
-
 XTerm*termName: xterm-256color
 
 XTerm*eightBitInput: false
@@ -57,9 +54,6 @@ XTerm*toolBar: false
 
 /* UXTerm */
 UXTerm*faceName: Monospace:style=Regular:size=10
-
-UXTerm*background: black
-UXTerm*foreground: #CCCCCC
 
 UXTerm*termName: xterm-256color
 
@@ -73,9 +67,6 @@ UXTerm*toolBar: false
 URxvt*font: xft:Monospace:size=10
 URxvt*scrollBar: false
 URxvt*letterSpace: -1
-
-URxvt*background: black
-URxvt*foreground: #CCCCCC
 
 URxvt*termName: rxvt-256color
 
