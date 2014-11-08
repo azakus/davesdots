@@ -396,3 +396,6 @@ nnoremap <silent><leader>b :CtrlPBuffer<CR>
 let g:ctrlp_custom_ignore = {
 \ 'dir': '\v[\/](node_modules|bower_components)'
 \}
+
+" ---- github-issues ----
+let g:gissues_lazy_load = 1
