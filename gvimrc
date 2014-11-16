@@ -15,10 +15,11 @@ set guioptions-=a       " Share the copy buffer with visual mode
 " gtk tabs are ugly
 if has('gui_gtk')
     set guioptions-=e       " Kill off the GUI tabs
-    set guifont=Terminus\ 10
-    if &guifont == 'Terminus 10'
-        " Terminus 4.39+ has powerline symbols
+    if fontdetect#hasFontFamily("Source Code Pro for Powerline,Sauce Code Powerline")
+        set guifont=Sauce\ Code\ Powerline\ 10
         let g:airline_powerline_fonts = 1
+    elseif fontdetect#hasFontFamily("Droid Sans Mono")
+        set guifont=DroidSansMono\ 10
     else
         set guifont=monospace\ 10
     endif

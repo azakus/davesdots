@@ -78,6 +78,7 @@ Plug 'rking/ag.vim'
 Plug 'jaxbot/github-issues.vim'
 Plug 'jeetsukumaran/vim-filebeagle'
 Plug 'nanotech/jellybeans.vim'
+Plug 'drmikehenry/vim-fontdetect'
 call plug#end()
 
 " ---- Load colorscheme after pathogen ----
