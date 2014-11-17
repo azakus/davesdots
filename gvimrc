@@ -24,5 +24,10 @@ if has('gui_gtk')
         set guifont=monospace\ 10
     endif
 elseif has('gui_macvim')
-    set guifont=menlo:h12
+    if fontdetect#hasFontFamily("Source Code Pro for Powerline")
+        set guifont=Sauce\ Code\ Powerline:h12
+        let g:airline_powerline_fonts = 1
+    else
+        set guifont=menlo:h12
+    endif
 endif
